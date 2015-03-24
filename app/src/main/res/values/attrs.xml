@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TwitterContent">
+        <attr name="textSize" format="dimension" />
+        <attr name="textGap" format="dimension" />
+        <attr name="textColor" format="color" />
+    </declare-styleable>
+    
+    <declare-styleable name="AsyncImageView">
+        <attr name="defaultSrc" format="reference" />
+        <attr name="url" format="string" />
+        <attr name="inDensity">
+            <enum name="ldpi" value="120" />
+            <enum name="mdpi" value="160" />
+            <enum name="hdpi" value="240" />
+            <enum name="xhdpi" value="320" />
+        </attr>
+    </declare-styleable>
+    
+    <declare-styleable name="JazzyViewPager">
+        <attr name="style">
+            <enum name="standard" value="0" />
+            <enum name="tablet" value="1" />
+            <enum name="cubein" value="2" />
+            <enum name="cubeout" value="3" />
+            <enum name="flipvertical" value="4" />
+            <enum name="fliphorizontal" value="5" />
+            <enum name="stack" value="6" />
+            <enum name="zoomin" value="7" />
+            <enum name="zoomout" value="8" />
+            <enum name="rotateup" value="9" />
+            <enum name="rotatedown" value="10" />
+            <enum name="accordion" value="11" />
+        </attr>
+        <attr name="fadeEnabled" format="boolean" />
+        <attr name="outlineEnabled" format="boolean" />
+        <attr name="outlineColor" format="color|reference" />
+    </declare-styleable>
+    
+     <declare-styleable name="HoloCircularProgressBar">
+        <attr name="stroke_width" format="dimension" />
+        <attr name="progress" format="float"></attr>
+        <attr name="marker_progress" format="float"></attr>
+        <attr name="progress_color" format="color"></attr>
+        <attr name="progress_background_color" format="color"></attr>
+        <attr name="thumb_visible" format="boolean"></attr>
+        <attr name="marker_visible" format="boolean"></attr>
+        <attr name="android:gravity"></attr>
+    </declare-styleable>
+    
+     <declare-styleable name="Theme">
+        <attr name="circularProgressBarStyle" format="reference"></attr>        
+    </declare-styleable>
+
+</resources>

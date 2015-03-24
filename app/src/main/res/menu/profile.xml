@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item
+        android:id="@+id/app_recommend"
+        android:showAsAction="always"
+        android:visible="true"
+        android:title="@string/but_app_recommend"/>
+    
+      <item
+        android:id="@+id/setting"
+        android:icon="@drawable/action_settings"
+        android:showAsAction="always"
+        android:title="@string/but_setting"/>
+      
+      <item
+        android:id="@+id/follow"
+        android:icon="@drawable/social_add_person"
+        android:showAsAction="always"
+        android:visible="false"
+        android:title="@string/but_follow"/>
+      
+      <item
+        android:id="@+id/at_ta"
+        android:icon="@drawable/at_light"
+        android:title="@string/but_at_ta"
+        android:visible="false"
+        android:showAsAction="always"/>
+      
+</menu>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<magic.yuyong.view.MaterialRippleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:magic="http://schemas.android.com/apk/res/magic.yuyong"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:rippleAlpha="0.2"
+    app:rippleColor="#585858"
+    app:rippleDuration="500"
+    app:rippleFadeDuration="300"
+    app:rippleHover="true"
+    app:rippleInAdapter="true"
+    app:rippleOverlay="false" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dip"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:paddingTop="10dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/user_avatar"
+                android:layout_width="@dimen/avatar"
+                android:layout_height="@dimen/avatar" />
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Wanyuyong"
+                    android:textColor="#FF000000"
+                    android:textSize="@dimen/user_name_secondary_text_size" />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2012-12-22 AM 08:38:43"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/time_text_size" />
+
+                <magic.yuyong.view.TwitterContent
+                    android:id="@+id/text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    magic:textColor="#FF666666"
+                    magic:textSize="@dimen/twitter_content_secondary_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</magic.yuyong.view.MaterialRippleLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="theme_color">#FF33b5e5</color>
+    <color name="theme_color_translucence">#8033b5e5</color>
+    <color name="theme_color_75">#C033b5e5</color>
+
+    <color name="twitter_item_bg_unpressed">#FFFFFFFF</color>
+    <color name="twitter_item_bg_pressed">#FFDDDDDD</color>
+    
+    <color name="alert">#C0FF9900</color>
+    
+    <color name="twitter_board_startcolor">#FF660066</color>
+    <color name="twitter_board_centercolor">#FFCC6666</color>
+    <color name="twitter_board_endcolor">#FF330033</color>
+    
+    <color name="profile_bg_startcolor">#FF990033</color>
+    <color name="profile_bg_centercolor">#FFFFCC33</color>
+    <color name="profile_bg_endcolor">#FFFFCCFF</color>
+    
+</resources>

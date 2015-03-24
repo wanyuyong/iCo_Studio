@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/get_pic"
+        android:icon="@drawable/device_access_camera"
+        android:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/camera"
+                android:showAsAction="never"
+                android:title="@string/but_camera"/>
+            <item
+                android:id="@+id/img"
+                android:showAsAction="never"
+                android:title="@string/but_img"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/face"
+        android:icon="@drawable/emoticon_light"
+        android:showAsAction="always"
+        android:title="@string/but_face"/>
+    <item
+        android:id="@+id/send"
+        android:icon="@drawable/social_send_now"
+        android:showAsAction="always"
+        android:title="@string/but_send"/>
+    <item
+        android:icon="@drawable/sort_by"
+        android:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/at"
+                android:title="@string/but_at"/>
+            <item
+                android:id="@+id/topic"
+                android:title="@string/but_topic"/>
+            <item
+                android:id="@+id/coordinate"
+                android:title="Coordinate"
+                android:visible="false"/>
+            <item
+                android:id="@+id/clear"
+                android:title="@string/but_clean"/>
+        </menu>
+    </item>
+
+</menu>

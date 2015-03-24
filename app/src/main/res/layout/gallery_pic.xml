@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:magic="http://schemas.android.com/apk/res/magic.yuyong"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <magic.yuyong.view.AsyncImageViewTouch
+        android:id="@+id/image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" />
+    
+    <pl.droidsonroids.gif.AsyncGifImageView
+        android:id="@+id/gif_image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:visibility="gone"/>
+
+   <magic.yuyong.view.HoloCircularProgressBar
+        android:id="@+id/progress"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        magic:progress_color="@color/theme_color_75"
+        magic:progress_background_color="#FFCCCCCC"
+        magic:stroke_width="5dip"
+        android:layout_gravity="center"/>
+   
+   <TextView android:id="@+id/but_reload"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:text="@string/but_down_pic_faild"
+       android:textColor="@color/theme_color"
+       android:drawableTop="@drawable/reload_but_bg"
+       android:visibility="gone"/>
+
+</FrameLayout>

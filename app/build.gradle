@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion '21.1.2'
+
+    defaultConfig {
+        applicationId "magic.yuyong"
+        minSdkVersion 15
+        targetSdkVersion Integer.parseInt(project.ANDROID_BUILD_TARGET_SDK_VERSION)
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile project(':libraries:ActionBar-PullToRefresh')
+    compile project(':libraries:WeiboSDK')
+    compile files('libs/nineoldandroids-2.4.0.jar')
+    compile files('libs/picasso-2.2.0.jar')
+    compile files('libs/umeng_sdk.jar')
+    compile files('libs/wandoujia-ads.jar')
+    compile 'com.android.support:support-v13:21.0.3'
+}
