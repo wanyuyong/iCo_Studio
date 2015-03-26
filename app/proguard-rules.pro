@@ -15,3 +15,10 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+-dontwarn com.squareup.**
+-keep class com.squareup.** { *; }
+
+#sina
+-keep public class android.webkit.** { public *; }
+-keep public class com.weibo.net.** { public *; }
