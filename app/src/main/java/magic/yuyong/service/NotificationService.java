@@ -127,8 +127,14 @@ public class NotificationService extends Service implements RequestListener {
 	private void sendNotification(String notificationStr, int id) {
 		NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 		nm.cancel(id);
-		Notification n = new Notification(R.drawable.notification_icon,
-				"Notification From i Co.", System.currentTimeMillis());
+
+		Notification n = new Notification.Builder(getApplicationContext())
+				.setContentTitle(getResources().getText(R.string.title_notification))
+				.setContentText(notificationStr)
+				.setSmallIcon(R.drawable.notification_icon)
+				.setWhen(System.currentTimeMillis())
+				.build();
+
 		n.flags = Notification.FLAG_AUTO_CANCEL;
 		n.defaults = Notification.DEFAULT_SOUND;
 		Intent i = new Intent();
@@ -154,10 +160,10 @@ public class NotificationService extends Service implements RequestListener {
 				getApplicationContext(), id, i,
 				PendingIntent.FLAG_UPDATE_CURRENT);
 
-		n.setLatestEventInfo(getApplicationContext(),
-				getResources().getText(R.string.title_notification),
-				notificationStr, contentIntent);
+
 		nm.notify(id, n);
+
+
 	}
 
 	@Override
