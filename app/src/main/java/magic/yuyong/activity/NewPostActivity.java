@@ -114,6 +114,7 @@ public class NewPostActivity extends BaseActivity implements OnClickListener,
 		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		super.onCreate(savedInstanceState);
 		actionBar.setDisplayHomeAsUpEnabled(true);
+		actionBar.setDisplayShowHomeEnabled(false);
 		setProgressBarIndeterminateVisibility(false);
 
 		setContentView(R.layout.new_post);
@@ -526,7 +527,6 @@ public class NewPostActivity extends BaseActivity implements OnClickListener,
 
 							@Override
 							public void onWeiboException(WeiboException arg0) {
-								
 							}
 						});
 			}

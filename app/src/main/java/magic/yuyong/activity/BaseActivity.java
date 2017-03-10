@@ -16,7 +16,6 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.umeng.analytics.MobclickAgent;
 
 import magic.yuyong.app.AppConstant;
 
@@ -35,13 +34,11 @@ public class BaseActivity extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
-        MobclickAgent.onPause(this);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        MobclickAgent.onResume(this);
     }
 
     @Override

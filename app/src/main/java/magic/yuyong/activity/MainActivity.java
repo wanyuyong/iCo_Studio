@@ -30,8 +30,6 @@ import com.sina.weibo.sdk.auth.sso.SsoHandler;
 import com.sina.weibo.sdk.exception.WeiboException;
 import com.sina.weibo.sdk.net.RequestListener;
 import com.sina.weibo.sdk.openapi.legacy.AccountAPI;
-import com.umeng.update.UmengUpdateAgent;
-import com.wandoujia.ads.sdk.Ads;
 
 public class MainActivity extends BaseActivity implements OnClickListener,
 		WeiboAuthListener {
@@ -49,12 +47,6 @@ public class MainActivity extends BaseActivity implements OnClickListener,
 				R.color.theme_color));
 		setContentView(R.layout.main);
 
-		// Init AdsSdk.
-		try {
-			Ads.init(this, AppConstant.ADS_APP_ID, AppConstant.ADS_SECRET_KEY);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 
 		content = findViewById(R.id.content);
 		login_but = (TextView) this.findViewById(R.id.login_but);
@@ -122,7 +114,6 @@ public class MainActivity extends BaseActivity implements OnClickListener,
 			chooseMode();
 		} else {
 			has_check_update = true;
-			UmengUpdateAgent.update(this);
 		}
 	}
 

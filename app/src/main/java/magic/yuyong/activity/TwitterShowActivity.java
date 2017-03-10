@@ -353,6 +353,8 @@ public class TwitterShowActivity extends BaseActivity implements
 
 		super.onCreate(savedInstanceState);
 		actionBar.setDisplayHomeAsUpEnabled(true);
+		actionBar.setDisplayShowHomeEnabled(false);
+
 
 		initView();
 

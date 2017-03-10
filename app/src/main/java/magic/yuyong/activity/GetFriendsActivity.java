@@ -112,6 +112,7 @@ public class GetFriendsActivity extends BaseActivity implements
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		actionBar.setDisplayHomeAsUpEnabled(true);
+		actionBar.setDisplayShowHomeEnabled(false);
 		setContentView(R.layout.at_friends);
 
 		friendsList = (ListView) findViewById(R.id.friends_list);

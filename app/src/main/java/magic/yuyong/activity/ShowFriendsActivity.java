@@ -178,6 +178,7 @@ public class ShowFriendsActivity extends BaseActivity implements
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		actionBar.setDisplayHomeAsUpEnabled(true);
+		actionBar.setDisplayShowHomeEnabled(false);
 
 		setContentView(R.layout.show_friends);
 		uid = getIntent().getLongExtra("uid", -1L);

@@ -60,7 +60,6 @@ import com.sina.weibo.sdk.net.RequestListener;
 import com.sina.weibo.sdk.openapi.CommentsAPI;
 import com.sina.weibo.sdk.openapi.legacy.FavoritesAPI;
 import com.sina.weibo.sdk.openapi.legacy.StatusesAPI;
-import com.umeng.update.UmengUpdateAgent;
 
 public class TimeLineModeActivity extends GetTwitterActivity implements
 		OnRefreshListener {
@@ -396,7 +395,6 @@ public class TimeLineModeActivity extends GetTwitterActivity implements
 		boolean checkUpdate = getIntent()
 				.getBooleanExtra("check_update", false);
 		if (checkUpdate) {
-			UmengUpdateAgent.update(this);
 		}
 	}
 

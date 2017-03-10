@@ -26,6 +26,9 @@ public abstract class GetTwitterActivity extends BaseActivity {
 
 		@Override
 		public void onComplete(String response) {
+
+			Debug.e("--------onComplete--------"+response);
+
 			requestState.response = response;
 			onRequestComplete(requestState);
 			
@@ -42,7 +45,7 @@ public abstract class GetTwitterActivity extends BaseActivity {
 			msg.what = AppConstant.MSG_NETWORK_EXCEPTION;
 			msg.obj = requestState;
 			handler.sendMessage(msg);
-			Debug.e(e.getMessage());
+			Debug.e("--------onWeiboException--------"+e.getMessage());
 		}
 
 	}

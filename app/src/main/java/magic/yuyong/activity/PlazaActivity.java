@@ -45,7 +45,6 @@ import com.sina.weibo.sdk.exception.WeiboException;
 import com.sina.weibo.sdk.net.RequestListener;
 import com.sina.weibo.sdk.openapi.legacy.FavoritesAPI;
 import com.sina.weibo.sdk.openapi.legacy.StatusesAPI;
-import com.wandoujia.ads.sdk.Ads;
 
 public class PlazaActivity extends GetTwitterActivity implements
 		OnRefreshListener{
@@ -117,20 +116,12 @@ public class PlazaActivity extends GetTwitterActivity implements
 	}
 	
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.setting, menu);
-		return super.onCreateOptionsMenu(menu);
-	}
-	
-	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
 			finish();
 			break;
 		case R.id.app_recommend:
-			Ads.showAppWall(this, "76690c890fe6d156088dc8d73655cd48");
 			break;
 		}
 		return true;

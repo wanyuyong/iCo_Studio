@@ -60,7 +60,6 @@ import com.sina.weibo.sdk.openapi.legacy.FavoritesAPI;
 import com.sina.weibo.sdk.openapi.legacy.FriendshipsAPI;
 import com.sina.weibo.sdk.openapi.legacy.StatusesAPI;
 import com.squareup.picasso.Picasso;
-import com.wandoujia.ads.sdk.Ads;
 
 public class ProfileActivity extends GetTwitterActivity implements
 		OnClickListener, OnRefreshListener, SensorEventListener {
@@ -237,6 +236,7 @@ public class ProfileActivity extends GetTwitterActivity implements
 		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		super.onCreate(savedInstanceState);
 		actionBar.setDisplayHomeAsUpEnabled(true);
+		actionBar.setDisplayShowHomeEnabled(false);
 		
 		setContentView(R.layout.profile);
 		head = getLayoutInflater().inflate(R.layout.profile_head, null);
@@ -538,7 +538,6 @@ public class ProfileActivity extends GetTwitterActivity implements
 			startActivity(postIntent);
 			break;
 		case R.id.app_recommend:
-			Ads.showAppWall(this, "d2a9ab5461b28943f2abe8d78afc1526");
 			break;
 		}
 		return true;

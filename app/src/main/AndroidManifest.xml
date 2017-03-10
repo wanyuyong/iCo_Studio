@@ -125,34 +125,6 @@
             </intent-filter>
         </receiver>
 
-        <!-- umeng -->
-        <meta-data
-            android:name="UMENG_APPKEY"
-            android:value="5018cea05270156dd800000d"></meta-data>
-        <meta-data
-            android:name="UMENG_CHANNEL"
-            android:value="magic" />
-
-        <service
-            android:name="com.umeng.common.net.DownloadingService"
-            android:exported="true"
-            android:process=":DownloadingService"></service>
-
-        <!-- For AdsSdk.WanDouJia -->
-        <activity
-            android:name="com.wandoujia.ads.sdk.AppWallActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/app_name"
-            android:launchMode="singleTop" />
-        <activity
-            android:name="com.wandoujia.ads.sdk.AppWidgetContainerActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:launchMode="singleTop"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-        <service android:name="com.wandoujia.ads.sdk.DownloadService" />
-        <!-- AdsSdk End. -->
-
         <!-- sina -->
         <activity
             android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"

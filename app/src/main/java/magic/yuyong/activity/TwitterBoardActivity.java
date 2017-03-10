@@ -46,7 +46,6 @@ import android.widget.Toast;
 import com.sina.weibo.sdk.exception.WeiboException;
 import com.sina.weibo.sdk.net.RequestListener;
 import com.sina.weibo.sdk.openapi.legacy.StatusesAPI;
-import com.umeng.update.UmengUpdateAgent;
 
 public class TwitterBoardActivity extends GetTwitterActivity implements
 		OnClickListener, TwitterBoard.BoundaryListener {
@@ -90,7 +89,6 @@ public class TwitterBoardActivity extends GetTwitterActivity implements
 		boolean checkUpdate = getIntent()
 				.getBooleanExtra("check_update", false);
 		if (checkUpdate) {
-			UmengUpdateAgent.update(this);
 		}
 	}
 
@@ -192,8 +190,6 @@ public class TwitterBoardActivity extends GetTwitterActivity implements
 		innerButtonLay.setBackgroundDrawable(new Diagonal());
 		View postButton = innerButtonLay.findViewById(R.id.new_post);
 		postButton.setOnClickListener(this);
-		View plazaButton = innerButtonLay.findViewById(R.id.plaza);
-		plazaButton.setOnClickListener(this);
 		View settingButton = innerButtonLay.findViewById(R.id.setting);
 		settingButton.setOnClickListener(this);
 		View atButton = innerButtonLay.findViewById(R.id.at);
@@ -420,11 +416,6 @@ public class TwitterBoardActivity extends GetTwitterActivity implements
 						+ (int) DisplayUtil.dpToPx(getResources(), 5), scrollView,
 						innerButtonLay);
 			}
-			break;
-		case R.id.plaza:
-			Intent plazaActivity = new Intent(getApplicationContext(),
-					PlazaActivity.class);
-			startActivity(plazaActivity);
 			break;
 		case R.id.at:
 			Intent atMeActivity = new Intent(getApplicationContext(),

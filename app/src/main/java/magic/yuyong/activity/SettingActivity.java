@@ -21,7 +21,6 @@ import android.widget.Toast;
 import com.sina.weibo.sdk.exception.WeiboException;
 import com.sina.weibo.sdk.net.RequestListener;
 import com.sina.weibo.sdk.openapi.LogoutAPI;
-import com.wandoujia.ads.sdk.Ads;
 
 public class SettingActivity extends BaseActivity implements OnClickListener {
 
@@ -32,6 +31,7 @@ public class SettingActivity extends BaseActivity implements OnClickListener {
 		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		super.onCreate(savedInstanceState);
 		actionBar.setDisplayHomeAsUpEnabled(true);
+		actionBar.setDisplayShowHomeEnabled(false);
 		setContentView(R.layout.setting);
 		findViewById(R.id.attention_but).setOnClickListener(this);
 		findViewById(R.id.search_but).setOnClickListener(this);
@@ -40,7 +40,6 @@ public class SettingActivity extends BaseActivity implements OnClickListener {
 		findViewById(R.id.exit_but).setOnClickListener(this);
 		findViewById(R.id.time_line_but).setOnClickListener(this);
 		findViewById(R.id.notification_but).setOnClickListener(this);
-		findViewById(R.id.donate_but).setOnClickListener(this);
 		timeline_mode = (CheckBox) findViewById(R.id.timeline_mode);
 		timeline_mode.setChecked(Persistence
 				.isTimeLineMode(getApplicationContext()));
@@ -48,22 +47,14 @@ public class SettingActivity extends BaseActivity implements OnClickListener {
 		notification.setChecked(Persistence
 				.isReceiveNotification(getApplicationContext()));
 	}
-	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.setting, menu);
-		return super.onCreateOptionsMenu(menu);
-	}
+
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
 			finish();
-			break;
-		case R.id.app_recommend:
-			Ads.showAppWall(this, "130b4f2103b9c2b8bed46d521dc2c546");
+
 			break;
 		}
 		return true;
@@ -72,13 +63,6 @@ public class SettingActivity extends BaseActivity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.donate_but:
-			Intent intent = new Intent();
-			intent.setAction("android.intent.action.VIEW");
-			Uri uri = Uri.parse(AppConstant.DONATE_HOME);
-			intent.setData(uri);
-			startActivity(intent);
-			break;
 		case R.id.attention_but:
 			Intent profileIntent = new Intent(getApplicationContext(),
 					ProfileActivity.class);
