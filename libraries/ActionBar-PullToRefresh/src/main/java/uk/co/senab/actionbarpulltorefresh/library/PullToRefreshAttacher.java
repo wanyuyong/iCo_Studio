@@ -184,7 +184,7 @@ public class PullToRefreshAttacher {
      *            - Whether the attacher should be in a refreshing state,
      */
     final void setRefreshing(boolean refreshing) {
-        setRefreshingInt(null, refreshing, false);
+        setRefreshingInt(null, refreshing, true);
     }
 
     /**
