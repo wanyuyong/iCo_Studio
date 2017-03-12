@@ -13,7 +13,7 @@ import magic.yuyong.view.AsyncImageViewTouch;
 import magic.yuyong.view.HoloCircularProgressBar;
 import magic.yuyong.view.JazzyViewPager;
 import magic.yuyong.view.OutlineContainer;
-import pl.droidsonroids.gif.AsyncGifImageView;
+import magic.yuyong.view.AsyncGifImageView;
 import android.app.Activity;
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;

@@ -1,7 +1,14 @@
 /**
  * 
  */
-package pl.droidsonroids.gif;
+package magic.yuyong.view;
+
+import android.content.Context;
+import android.os.Handler;
+import android.os.Message;
+import android.os.Process;
+import android.text.TextUtils;
+import android.util.AttributeSet;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,16 +18,9 @@ import java.net.URL;
 import java.util.concurrent.Future;
 
 import magic.yuyong.util.Cache;
-import magic.yuyong.util.Debug;
 import magic.yuyong.util.MagicExecutorService;
-import android.content.Context;
-import android.os.Handler;
-import android.os.Message;
-import android.os.Process;
-import android.text.TextUtils;
-import android.util.AttributeSet;
-import android.view.GestureDetector;
-import android.view.MotionEvent;
+import pl.droidsonroids.gif.GifDrawable;
+import pl.droidsonroids.gif.GifImageView;
 
 /**
  * @title:AsyncGifImageView.java
